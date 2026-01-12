@@ -20,7 +20,7 @@ static const struct proc_ops proc_ops = {
 };
 
 /* This function is called when the module is loaded. */
-int proc_init(void)
+static int __init proc_init(void)
 {
     printk(KERN_INFO "Loading Kernel Module\n");
 
@@ -31,7 +31,7 @@ int proc_init(void)
 }
 
 /* This function is called when the module os removed. */
-void proc_exit(void)
+static void __exit proc_exit(void)
 {
     printk(KERN_INFO "Removing Kernel Module\n");
 
