@@ -1,0 +1,26 @@
+# Simple Kernel Module
+
+List all kernel modules.
+```bash
+lsmod
+```
+
+Compile current module. The file `simple.ko` represents the compiled kernel module.
+```bash
+make
+```
+
+Kernel modules are loaded using the `insmod` command.
+```bash
+sudo insmod simple.ko
+```
+
+Removing the kernel module involves invoking the `rmmod` command.
+```bash
+sudo rmmod simple
+```
+
+Check kernel log buffer.
+```bash
+sudo dmesg -k
+```
